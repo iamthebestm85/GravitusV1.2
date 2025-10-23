@@ -4,7 +4,6 @@ import subprocess
 import sys
 import os
 import platform
-import shutil
 
 def run_command(cmd, check=True, capture_output=False):
     """Run a shell command and return the result."""
@@ -61,13 +60,20 @@ def install_chrome():
     run_command("sudo apt install -y google-chrome-stable", check=False)
 
 def install_npm_packages():
-    """Install required npm packages."""
+    """Install required npm packages locally in the current directory."""
+    # Initialize package.json if it doesn't exist
+    if not os.path.exists("package.json"):
+        run_command("npm init -y", check=False)
+    
     packages = ["hpack", "colors", "puppeteer-real-browser"]
     for pkg in packages:
-        if run_command(f"npm list -g {pkg}", capture_output=True)[0] is None:
-            run_command(f"sudo npm install -g {pkg}", check=False)
+        run_command(f"npm install {pkg}", check=False)
 
 def main():
+    # Get current directory
+    current_dir = os.getcwd()
+    os.chdir(current_dir)
+    
     install_node_npm()
     install_chrome()
     install_npm_packages()
