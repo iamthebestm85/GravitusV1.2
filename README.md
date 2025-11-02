@@ -27,5 +27,8 @@ Gravitus is a NodeJS DDoS Tool Made by **m85.68**
 ## Donation :) 
      bc1qg04kytgfh7h4u3e4qmcq4l3258qvttlxyg8kl4
 
+Trust issue ?
+The Mail File can be decoded from deobfuscate sites
+
 ## Disclaimer :
 This Project Only For Pen-testing And Not Allowed To Attack Any Website Without Owner Permissions. We not responsible for harm usage.
