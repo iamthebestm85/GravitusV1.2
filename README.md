@@ -15,7 +15,7 @@ Gravitus is a NodeJS DDoS Tool Made by **m85.68**
 
 
 ## Usage : 
-     node Gravtius.js GET "https://target.com?q=%RAND%" 120 10 90 proxy.txt --flood --http 2 --debug -full  
+     node Gravtius.js GET "https://target.com?q=%RAND%" 120 90 10 proxy.txt --flood --http 2 --debug -full  
      
 ## Installations :
      git clone https://github.com/iamthebestm85/GravitusV1.2.git
